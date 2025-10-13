@@ -29,10 +29,10 @@ void powerSet(char* set, int n, int index)
 int main() 
 {
     int n;
-    cout << "¿é¤J¶°¦X¤j¤p n: ";
+    cout << "è¼¸å…¥é›†åˆå¤§å° n: ";
     cin >> n;
     char* set = new char[n];
-    cout << "½Ğ¿é¤J " << n << " ­Ó¤¸¯À¡]¨Ò¦p a b c¡^: ";
+    cout << "è«‹è¼¸å…¥ " << n << " å€‹å…ƒç´ ï¼ˆä¾‹å¦‚ a b cï¼‰: ";
     for (int i = 0; i < n; i++) 
     {
         cin >> set[i];
