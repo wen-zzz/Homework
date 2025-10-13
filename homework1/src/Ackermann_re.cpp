@@ -12,8 +12,9 @@ int Ack(int m, int n)
 int main() 
 {
     int m, n;
-    cout << "¿é¤J m ©M n: ";
+    cout << "Â¿Ã©Â¤J m Â©M n: ";
     cin >> m >> n;
     cout << "A(" << m << ", " << n << ") = " << Ack(m, n) << endl;
     return 0;
 }
+
