@@ -9,14 +9,14 @@ int Ack(int m, int n) {
     else if (m == 4 && n == 0) return 13;
     else
     {
-        cout << "¼Æ­È¤Ó¤j¡AµLªk³B²z¡C" << endl;
+        cout << "æ•¸å€¼å¤ªå¤§ï¼Œç„¡æ³•è™•ç†ã€‚" << endl;
         return -1;
     }
 }
 
 int main() {
     int m, n;
-    cout << "¿é¤J m ©M n: ";
+    cout << "è¼¸å…¥ m å’Œ n: ";
     cin >> m >> n;
     int result = Ack(m, n);
     if (result != -1)
