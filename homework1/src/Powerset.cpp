@@ -1,6 +1,5 @@
 #include <iostream>
 using namespace std;
-
 void powerSet(char* set, int n, int index) 
 {
     static bool chosen[100] = { false }; 
@@ -42,3 +41,4 @@ int main()
     delete[] set;
     return 0;
 }
+
