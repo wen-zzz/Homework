@@ -205,15 +205,7 @@ int main()
 
 ### 編譯與執行指令
 
-```bash
-$ g++ -std=c++17 -o ackermann ackermann.cpp
-$ ./ackermann
-
-$ g++ -std=c++17 -o powerset powerset.cpp
-$ ./powerset
-```
-
----
+本次作業使用Microsoft Visual Studio 2022編譯及執行
 
 ## 結論
 
