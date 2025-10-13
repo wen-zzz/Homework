@@ -61,23 +61,25 @@
 ```cpp
 #include <iostream>
 using namespace std;
-
-int Ackermann(int m, int n) {
+int Ack(int m, int n) 
+{
     if (m == 0)
         return n + 1;
     else if (n == 0)
-        return Ackermann(m - 1, 1);
+        return Ack(m - 1, 1);
     else
-        return Ackermann(m - 1, Ackermann(m, n - 1));
+        return Ack(m - 1, Ack(m, n - 1));
 }
-
-int main() {
+int main() 
+{
     int m, n;
     cout << "輸入 m 和 n: ";
     cin >> m >> n;
-    cout << "Ackermann(" << m << ", " << n << ") = " << Ackermann(m, n) << endl;
+    cout << "A(" << m << ", " << n << ") = " << Ack(m, n) << endl;
     return 0;
 }
+
+
 ```
 
 ---
@@ -88,14 +90,15 @@ int main() {
 #include <iostream>
 #include <cmath>
 using namespace std;
-
-int Ackermann_nonrecursive(int m, int n) {
+int Ack(int m, int n) {
     if (m == 0) return n + 1;
     else if (m == 1) return n + 2;
     else if (m == 2) return 2 * n + 3;
     else if (m == 3) return pow(2, n + 3) - 3;
-    else {
-        cout << "m 太大，非遞迴版本無法處理。" << endl;
+    else if (m == 4 && n == 0) return 13;
+    else
+    {
+        cout << "數值太大，無法處理。" << endl;
         return -1;
     }
 }
@@ -104,7 +107,7 @@ int main() {
     int m, n;
     cout << "輸入 m 和 n: ";
     cin >> m >> n;
-    int result = Ackermann_nonrecursive(m, n);
+    int result = Ack(m, n);
     if (result != -1)
         cout << "Ackermann(" << m << ", " << n << ") = " << result << endl;
     return 0;
@@ -119,33 +122,42 @@ int main() {
 #include <iostream>
 using namespace std;
 
-void powerSet(char* set, int n, int index) {
-    static bool chosen[100]; // 紀錄哪些元素被選取
+void powerSet(char* set, int n, int index) 
+{
+    static bool chosen[100] = { false }; 
 
-    if (index == n) {
+
+    if (index == n) 
+    {
         cout << "{ ";
-        for (int i = 0; i < n; i++)
+        for (int i = 0; i < n; i++) 
+        {
             if (chosen[i]) cout << set[i] << " ";
+        }
         cout << "}" << endl;
         return;
     }
 
-    // 不選 set[index]
+
     chosen[index] = false;
     powerSet(set, n, index + 1);
 
-    // 選 set[index]
+
     chosen[index] = true;
     powerSet(set, n, index + 1);
 }
 
-int main() {
+int main() 
+{
     int n;
     cout << "輸入集合大小 n: ";
     cin >> n;
     char* set = new char[n];
     cout << "請輸入 " << n << " 個元素（例如 a b c）: ";
-    for (int i = 0; i < n; i++) cin >> set[i];
+    for (int i = 0; i < n; i++) 
+    {
+        cin >> set[i];
+    }
     cout << "\nPower set:" << endl;
     powerSet(set, n, 0);
     delete[] set;
@@ -160,7 +172,7 @@ int main() {
 | 題目 | 時間複雜度 | 空間複雜度 | 備註 |
 |------|--------------|-------------|------|
 | Ackermann (遞迴) | 極高 (超指數級) | O(m+n) | 遞迴層數極深 |
-| Ackermann (非遞迴) | O(1) (m≤3) | O(1) | 直接套用數學公式 |
+| Ackermann (非遞迴) | O(1) (m≤3)or(m=4,n=0) | O(1) | 直接套用數學公式 |
 | Power Set (遞迴) | O(2ⁿ × n) | O(n) | 每層遞迴二分支 |
 
 ---
