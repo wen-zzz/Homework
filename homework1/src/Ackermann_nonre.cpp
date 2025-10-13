@@ -1,7 +1,6 @@
 #include <iostream>
 #include <cmath>
 using namespace std;
-
 int Ack(int m, int n) {
     if (m == 0) return n + 1;
     else if (m == 1) return n + 2;
@@ -24,4 +23,5 @@ int main() {
         cout << "Ackermann(" << m << ", " << n << ") = " << result << endl;
     return 0;
 }
+
 
