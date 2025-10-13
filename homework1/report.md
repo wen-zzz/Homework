@@ -154,7 +154,7 @@ int main()
     cout << "輸入集合大小 n: ";
     cin >> n;
     char* set = new char[n];
-    cout << "請輸入 " << n << " 個元素（例如 a b c）: ";
+    cout << "請輸入 " << n << " 個元素: ";
     for (int i = 0; i < n; i++) 
     {
         cin >> set[i];
