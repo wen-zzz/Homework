@@ -2,7 +2,7 @@
 
 作業二：多項式類別 Polynomial
 ---
-# Polynomial Class — 多項式運算
+ Polynomial Class — 多項式運算
 
 ---
 
