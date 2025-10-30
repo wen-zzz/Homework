@@ -187,10 +187,7 @@ n coef₁ exp₁ coef₂ exp₂ ...
 
 ## 編譯與執行指令
 
-```bash
-g++ -std=c++17 -o polynomial main.cpp
-./polynomial
-```
+本次作業使用Microsoft Visual Studio 2022編譯及執行
 
 ## 結論
 
