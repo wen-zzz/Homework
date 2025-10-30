@@ -94,7 +94,7 @@ public:
 };
 ```
 
-（完整程式如 `main.cpp` 所示）
+（完整程式如 `Polynomial.cpp` 所示）
 
 ---
 
