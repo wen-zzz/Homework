@@ -1,6 +1,6 @@
 # 41343136
 
-作業一：多項式類別 Polynomial
+作業二：多項式類別 Polynomial
 ---
 # Polynomial Class — 多項式運算
 
