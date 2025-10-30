@@ -14,9 +14,9 @@ class Term{
 
 class Polynomial{
 private:
-    Term *termArray;    // °}¦C¥»Åé
-    int capacity;       // °}¦C¤j¤p
-    int terms;          // °}¦C¤º«D¹s¼Æ¦r
+    Term *termArray;    // é™£åˆ—æœ¬é«”
+    int capacity;       // é™£åˆ—å¤§å°
+    int terms;          // é™£åˆ—å…§éžé›¶æ•¸å­—
 public:
     Polynomial(): capacity(2), terms(0){
         termArray = new Term[capacity];
@@ -134,12 +134,12 @@ float Polynomial::Eval(float x)
 }
 int main()
 {
-    //¤@¦¸¥u¯à¾Ü¤@¼Ò¦¡¿ï¾Ü,¤£µM·|±Y¼ì
+    //ä¸€æ¬¡åªèƒ½æ“‡ä¸€æ¨¡å¼é¸æ“‡,ä¸ç„¶æœƒå´©æ½°
 	Polynomial a;
     Polynomial b;
     int mode,x;
     cin >> a >> b;
-    cout << "¿ï¾Ü¼Ò¦¡(1.Add,2.Muti):";
+    cout << "é¸æ“‡æ¨¡å¼(1.Add,2.Muti):";
     cin >> mode;
     switch (mode)
     {
@@ -147,7 +147,7 @@ int main()
     {
         Polynomial c = a.Add(b);
         cout << c << endl;
-        cout << "¿é¤JX:";
+        cout << "è¼¸å…¥X:";
         cin >> x;
         int sum = c.Eval(x);
         cout << sum << endl;
@@ -163,3 +163,4 @@ int main()
     default:return 0;
     }
 }
+
